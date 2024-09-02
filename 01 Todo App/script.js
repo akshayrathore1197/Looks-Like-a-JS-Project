@@ -1,3 +1,15 @@
+function checkDesktopMode() {
+  const desktopWidthThreshold = 600; 
+  if (window.innerWidth < desktopWidthThreshold) {
+      alert('Please Enable desktop mode.');
+  } 
+}
+
+
+checkDesktopMode();
+
+window.addEventListener('resize', checkDesktopMode);
+
 document.addEventListener("DOMContentLoaded", () => {
   const storedTasks = JSON.parse(localStorage.getItem("tasks"));
 

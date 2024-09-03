@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Formatter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./favicon/fav.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>JSON Formatter & Beautifier</h2>
+      <div class="row">
+        <div class="column">
+          <textarea id="JSONBefore"></textarea>
+        </div>
+
+        <div class="column buttons">
+          <button id="validateBtn" onclick="ValidateJSON()">
+            Validate JSON
+          </button>
+          <button id="formatBtn" onclick="FormatBeautifyJSON()" disabled>
+            Format / Beautify
+          </button>
+          <button id="minifyBtn" onclick="MinifyCompactJSON()" disabled>
+            Minify / Compact
+          </button>
+        </div>
+
+        <div class="column">
+          <div class="copy-container">
+            <textarea id="JSONAfter" readonly></textarea>
+            <button
+              id="copyBtn"
+              onclick="copyToClipboard()"
+              title="Copy to clipboard"
+            >
+         <img src="./icon/copy.png" width="20px">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toaster" class="hidden">Copied to clipboard!</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
